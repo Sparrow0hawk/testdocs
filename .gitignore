@@ -1,0 +1,48 @@
+
+# Built python files
+__pycache__
+.pytest_cache/
+
+# Mac crap
+.DS_Store
+
+# IDE project files
+.spyproject/
+.idea/
+
+# jupyter notebook stuff
+*.ipynb_checkpoints/
+
+# Others
+*.swp
+*.Rhistory
+
+# coverage files
+.coverage
+**/htmlcov/*
+
+# scrapbook 
+**/scrapbook/*
+.Rproj.user
+
+# RStudio
+.Rproj.user/
+*.Rproj
+
+# snapshot files
+*.npz
+*.pkl
+
+# setuptools items
+**/*.egg-info/*
+**/build/*
+**/dist/*
+
+# vscode items
+**/.vscode/*
+
+# imgui
+imgui.ini
+
+# sphinx local build items
+docs/build/*

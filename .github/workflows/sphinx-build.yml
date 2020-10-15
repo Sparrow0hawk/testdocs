@@ -8,10 +8,20 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: ammaraskar/sphinx-action@master
+    - uses: goanpeca/setup-miniconda@v1
       with:
-        docs-folder: "docs/"
+        environment-file: environment.yml
+        python-version: 3.7
+        auto-activate-base: false
+        activate-environment: ramp-ua
+
+    - name: make docs
+      shell: bash -l {0}
+      run: |
+        conda activate ramp-ua
+        cd docs
+        make clean
+        make html
 
     - name: Commit documentation changes
       run: |

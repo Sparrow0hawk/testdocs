@@ -8,12 +8,11 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: goanpeca/setup-miniconda@v1
+    - uses: conda-incubator/setup-miniconda@v1
       with:
-        environment-file: environment.yml
-        python-version: 3.7
-        auto-activate-base: false
         activate-environment: ramp-ua
+        environment-file: etc/example-environment.yml
+        auto-activate-base: false
 
     - name: make docs
       shell: bash -l {0}

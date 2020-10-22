@@ -23,9 +23,10 @@ jobs:
         make clean
         make html
 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+    - name: deploy
+      uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
-        branch: gh-pages
-        directory: docs
+        BRANCH: gh-pages
+        FOLDER: docs
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        CLEAN: true
